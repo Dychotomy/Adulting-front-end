@@ -6,7 +6,9 @@ const Landing = () => {
     return (
         <>
             <div className='landing-page'>Adulting
-            <button className='landing-button'>Enter</button>
+            <Link to='/home'>
+                    <button type='button' className='landing-button'>Enter</button>
+                </Link>
             </div>
         </>
     )
