@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap'); */
 
 .landing-page {
     display: flex;
@@ -23,6 +23,7 @@
     height: 25px;
     width: 60px;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: .35em;
     background-color: #64bcc5;
     border-radius: 8px;
    

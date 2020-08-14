@@ -1,0 +1,12 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-button {
+    align-self: center;
+    background-color: #64bcc5;
+    width: 8%;
+    border-radius: 8px;
+}

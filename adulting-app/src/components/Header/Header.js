@@ -1,8 +1,14 @@
 import React from 'react'
+import Nav from '../Nav/Nav'
+import './header.css'
 
 const Header = () => {
     return (
-        <div>Adulting</div>
+        <>
+            <h1 className='header'>
+                <Nav />
+            </h1>
+        </>
     )
 }
 

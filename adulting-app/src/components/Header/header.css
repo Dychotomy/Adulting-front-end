@@ -1,0 +1,9 @@
+.header {
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    height: 12vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #dbe5e6, #617886 );
+    color: #64bcc5;
+}

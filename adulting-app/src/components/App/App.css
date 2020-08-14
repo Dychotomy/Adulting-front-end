@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap');
+
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: radial-gradient(circle at 25%, #617886, #dbe5e6);
 }
 
