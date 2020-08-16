@@ -1,9 +1,11 @@
 import React from 'react'
 
-const EventArt = () => {
+const EventArt = (props) => {
+    console.log('Art', props.artwork)
     return (
-        <div>Placeholder</div>
+        <img src={props.artwork} alt='event' />
     )
+
 }
 
 export default EventArt
