@@ -1,16 +1,16 @@
 import React from 'react'
 
 const EventText = (props) => {
-    const { dailyEvent } = props
+    const { dailyEvent, eventHandler } = props
     console.log('dailyEvent', props.dailyEvent)
     return (
         <>
             <div>{dailyEvent.description}</div>
             <div>{dailyEvent.option_a}
-                <button>A</button>
+                <button onClick={eventHandler}>A</button>
             </div>
             <div>{dailyEvent.option_b}
-                <button>B</button>
+                <button onClick={eventHandler}>B</button>
             </div>
         </>
     )

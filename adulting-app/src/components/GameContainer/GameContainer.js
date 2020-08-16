@@ -33,20 +33,23 @@ const GameContainer = () => {
 
     }
 
-    // if (events) {
-    //     let dailyEvents = events    
-    // }
-
     const eventPicker = () => {
         let selectedEvent = dailyEvents[Math.floor(Math.random() * Math.floor(dailyEvents.length - 1))]
         dailyEvents.splice(dailyEvents.indexOf(selectedEvent), 1)
         return selectedEvent
     }
+
+    const eventHandler = () => {
+        if (day < 4) {
+            setDay(day + 1)
+        }
+    }
+
     let screen
     if (player === null) {
         screen = <CharacterSelection characters={characters} chooseCharacter={chooseCharacter} />
     } else {
-        screen = <Event day={day} eventPicker={eventPicker} />
+        screen = <Event day={day} eventPicker={eventPicker} eventHandler={eventHandler} />
     }
     return screen
 
