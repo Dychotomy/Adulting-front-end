@@ -9,6 +9,7 @@ const GameContainer = () => {
     const [player, setPlayer] = useState(null)
     const [events, setEvents] = useState([])
     const [dailyEvents, setDailyEvents] = useState([])
+    const [dailyEventResult, setDailyEventResult] = useState({ text: '', artwork: '', isComplete: false })
     const [day, setDay] = useState(0)
 
     useEffect(() => {
@@ -17,8 +18,8 @@ const GameContainer = () => {
                 let res = await axios(`http://localhost:3000/characters`)
                 setCharacters(res.data)
                 res = await axios(`http://localhost:3000/events`)
-                setEvents(res.data)
-                setDailyEvents(res.data)
+                setEvents([...res.data])
+                setDailyEvents([...res.data])
             } catch (err) {
                 console.error(err)
             }
@@ -39,8 +40,23 @@ const GameContainer = () => {
         return selectedEvent
     }
 
-    const eventHandler = () => {
+    const eventHandler = (id, option) => {
+        let optionTest
+        const eventChallenge = events.filter(element => element.id === id ? element : null)[0]
+        console.log(eventChallenge)
+        const eventResults = eventChallenge.event_result
+        console.log(eventResults)
+        optionTest = eventChallenge[`option_${option}_test`]
+        let testResult = player[optionTest] + Math.floor(Math.random() * 3)
+        if (testResult >= eventChallenge.difficulty) {
+            setDailyEventResult({ text: eventResults[`${option}_success`], artwork: eventResults[`${option}_success_art`], isComplete: true })
+        } else {
+            setDailyEventResult({ text: eventResults[`${option}_failure`], artwork: eventResults[`${option}_failure_art`], isComplete: true })
+        }
+    }
+    const continueHandler = () => {
         if (day < 4) {
+            setDailyEventResult({ text: '', artwork: '', isComplete: false })
             setDay(day + 1)
         }
     }
@@ -49,7 +65,13 @@ const GameContainer = () => {
     if (player === null) {
         screen = <CharacterSelection characters={characters} chooseCharacter={chooseCharacter} />
     } else {
-        screen = <Event day={day} eventPicker={eventPicker} eventHandler={eventHandler} />
+        screen = <Event
+            day={day}
+            eventPicker={eventPicker}
+            eventHandler={eventHandler}
+            continueHandler={continueHandler}
+            dailyEventResult={dailyEventResult}
+        />
     }
     return screen
 
