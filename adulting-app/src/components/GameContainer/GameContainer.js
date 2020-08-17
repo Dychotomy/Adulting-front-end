@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import CharacterSelection from '../CharacterSelection/CharacterSelection'
 import Event from '../Event/Event'
+import EndScene from '../EndScene/EndScene'
 import './game-container.css'
 
 const GameContainer = () => {
@@ -10,6 +11,7 @@ const GameContainer = () => {
     const [events, setEvents] = useState([])
     const [dailyEvents, setDailyEvents] = useState([])
     const [dailyEventResult, setDailyEventResult] = useState({ text: '', artwork: '', isComplete: false })
+    const [gameOver, setGameOver] = useState(false)
     const [day, setDay] = useState(0)
 
     useEffect(() => {
@@ -66,8 +68,11 @@ const GameContainer = () => {
         if (day < 4) {
             setDailyEventResult({ text: '', artwork: '', isComplete: false })
             setDay(day + 1)
+        } else {
+            setGameOver(true)
         }
     }
+    let endScene = <EndScene player={player} />
 
     let screen
     if (player === null) {
@@ -81,7 +86,7 @@ const GameContainer = () => {
             dailyEventResult={dailyEventResult}
         />
     }
-    return screen
+    return <div id='gameContainer'>{gameOver ? endScene : screen}</div>
 
 }
 

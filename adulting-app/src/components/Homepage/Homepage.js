@@ -5,6 +5,18 @@ import Footer from '../Footer/Footer'
 import './homepage.css'
 
 const Homepage = () => {
+    // const fullscreen = document.querySelector('#gameContainer')
+
+    // fullscreen.requestFullscreen()
+    //     .then(function () {
+    //         // element has entered fullscreen mode successfully
+    //     })
+    //     .catch(function (error) {
+    //         // element could not enter fullscreen mode
+    //         // error message
+    //         console.log(error.message);
+    //     })
+
     return (
         <div className='home'>
             <Header />
