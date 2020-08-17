@@ -43,17 +43,25 @@ const GameContainer = () => {
     const eventHandler = (id, option) => {
         let optionTest
         const eventChallenge = events.filter(element => element.id === id ? element : null)[0]
-        console.log(eventChallenge)
         const eventResults = eventChallenge.event_result
-        console.log(eventResults)
         optionTest = eventChallenge[`option_${option}_test`]
         let testResult = player[optionTest] + Math.floor(Math.random() * 3)
         if (testResult >= eventChallenge.difficulty) {
             setDailyEventResult({ text: eventResults[`${option}_success`], artwork: eventResults[`${option}_success_art`], isComplete: true })
+            setPlayer({
+                ...player,
+                resources: player.resources + eventResults[`${option}_success_score`]
+            })
         } else {
             setDailyEventResult({ text: eventResults[`${option}_failure`], artwork: eventResults[`${option}_failure_art`], isComplete: true })
+            setPlayer({
+                ...player,
+                resources: player.resources + eventResults[`${option}_failure_score`]
+            })
         }
     }
+
+    console.log(player)
     const continueHandler = () => {
         if (day < 4) {
             setDailyEventResult({ text: '', artwork: '', isComplete: false })
