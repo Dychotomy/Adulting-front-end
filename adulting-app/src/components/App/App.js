@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Landing from '../Landing/Landing'
@@ -7,6 +7,8 @@ import Homepage from '../Homepage/Homepage';
 import GameContainer from '../GameContainer/GameContainer'
 
 function App() {
+
+
   return (
     <div className="App">
       <Switch>

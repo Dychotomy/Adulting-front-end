@@ -2,7 +2,6 @@ import React from 'react'
 
 const EventText = (props) => {
     const { dailyEvent, eventHandler, continueHandler, dailyEventResult } = props
-    console.log('dailyEvent', props.dailyEvent)
 
     let display = dailyEventResult.isComplete ?
         <>

@@ -9,11 +9,11 @@ const Event = (props) => {
 
     const dailyEvent = eventPicker()
 
-
     return (
         <>
             <h2>{dayTitle}</h2>
-            <EventArt artwork={dailyEventResult ? dailyEventResult.artwork : dailyEvent.artwork} />
+            {/* <EventArt artwork={dailyEventResult ? dailyEventResult.artwork : dailyEvent.artwork} /> */}
+            <EventArt dailyEvent={dailyEvent} dailyEventResult={dailyEventResult} />
             <EventText
                 dailyEvent={dailyEvent}
                 eventHandler={eventHandler}

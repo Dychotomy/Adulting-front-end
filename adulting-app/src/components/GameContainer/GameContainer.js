@@ -63,7 +63,6 @@ const GameContainer = () => {
         }
     }
 
-    console.log(player)
     const continueHandler = () => {
         if (day < 4) {
             setDailyEventResult({ text: '', artwork: '', isComplete: false })
