@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import EventArt from '../EventArt/EventArt'
 import EventText from '../EventText/EventText'
+import './event.css'
 
 const Event = (props) => {
     const { eventPicker, eventHandler, continueHandler, dailyEventResult } = props
@@ -11,7 +12,7 @@ const Event = (props) => {
 
     return (
         <>
-            <h2>{dayTitle}</h2>
+            <h2 className='event-day'>{dayTitle}</h2>
             {/* <EventArt artwork={dailyEventResult ? dailyEventResult.artwork : dailyEvent.artwork} /> */}
             <EventArt dailyEvent={dailyEvent} dailyEventResult={dailyEventResult} />
             <EventText

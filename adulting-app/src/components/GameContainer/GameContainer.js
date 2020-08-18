@@ -85,7 +85,7 @@ const GameContainer = () => {
             dailyEventResult={dailyEventResult}
         />
     }
-    return <div id='gameContainer'>{gameOver ? endScene : screen}</div>
+    return <div id='game-container'>{gameOver ? endScene : screen}</div>
 
 }
 
