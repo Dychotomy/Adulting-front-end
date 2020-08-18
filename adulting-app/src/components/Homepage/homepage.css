@@ -7,6 +7,8 @@
 
 .home-title {
     text-align: center;
+    justify-self: center;
+    align-self: center;
 }
 
 .home-img-1 {
@@ -50,7 +52,7 @@
     
     .home-text {
         grid-column: 2 / 3;
-        grid-row: 3 / 4;
+        grid-row: 3 / 5;
         justify-self: center;
         align-self: center;
     }
@@ -78,9 +80,8 @@
     }
     
     .home-button-location {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-        justify-self: center;
-        align-self: center;
+        grid-row: 5 / 6;
+        grid-column: 3 / 4;
+        align-self: initial;
     }
 }

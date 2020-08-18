@@ -6,7 +6,7 @@ const EventText = (props) => {
 
     let display = dailyEventResult.isComplete ?
         <div className='event-text-container'>
-            <div clasName='event-text-desc'>{dailyEventResult.text}</div>
+            <div className='event-text-desc'>{dailyEventResult.text}</div>
             <button className='event-text-button' onClick={continueHandler}>Continue</button>
         </div>
         :

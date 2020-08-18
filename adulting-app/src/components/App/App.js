@@ -5,6 +5,7 @@ import './App.css';
 import Landing from '../Landing/Landing'
 import Homepage from '../Homepage/Homepage';
 import GameContainer from '../GameContainer/GameContainer'
+import About from '../About/About'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Landing} />
         <Route path='/home' component={Homepage} />
+        <Route path='/about' component={About} />
         <Route path='/game' component={GameContainer} />
       </Switch>
     </div>
