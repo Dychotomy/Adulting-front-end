@@ -1,4 +1,4 @@
 .footer {
-    align-self: flex-start;
-    flex-shrink: 0;
+    grid-row: 6 / 7;
+    grid-column: 1;
 }

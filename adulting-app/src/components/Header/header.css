@@ -2,6 +2,7 @@
     margin: 0;
     padding-left: 10px;
     padding-bottom: 10px;
+    grid-column: 1 / 6;
     height: 12vh;
     width: 100%;
     background-image: linear-gradient(to bottom right, #dbe5e6, #617886 );

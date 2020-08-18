@@ -9,11 +9,13 @@ const Homepage = () => {
     return (
         <div className='home'>
             <Header />
-            <h2>Instructions</h2>
-            <p>Placeholder instructions have screen shots of actual play</p>
-            <Link to='/game'>
-                <button className='home-button'>Play</button>
-            </Link>
+            <h2 className='home-title'>Instructions</h2>
+            <p className='home-text'>Placeholder instructions have screen shots of actual play</p>
+            <div className='home-button-location'>
+                <Link to='/game'>
+                    <button className='home-button'>Play</button>
+                </Link>
+            </div>
             <Footer />
         </div>
     )

@@ -1,12 +1,30 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 12vh 1fr 1fr 1fr 1fr 20px;
+    height: 100%
+}
+
+.home-title {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: center;
+}
+
+.home-text {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.home-button-location {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    justify-self: center;
+    align-self: center;
 }
 
 .home-button {
-    align-self: center;
     background-color: #64bcc5;
-    width: 8%;
     border-radius: 8px;
 }
+
