@@ -2,7 +2,7 @@
 
 .App {
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
   background-image: radial-gradient(circle at 25%, #617886, #dbe5e6);
 }
 

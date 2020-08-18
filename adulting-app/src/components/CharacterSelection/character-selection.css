@@ -1,0 +1,48 @@
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.character-title {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #64bcc5;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #000;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    max-width: 320px;
+    border-radius: 10px;
+    color: #101112;
+}
+
+.character-name {
+    margin: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.character-img {
+    width: 75%;
+    border-radius: 50%;
+    border: 2px solid #101112;
+}
+
+.character-desc {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.character-button {
+    background-color: #64bcc5;
+    border-radius: 8px;
+}
