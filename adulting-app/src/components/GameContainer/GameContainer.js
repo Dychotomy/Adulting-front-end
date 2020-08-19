@@ -3,6 +3,7 @@ import axios from 'axios'
 import CharacterSelection from '../CharacterSelection/CharacterSelection'
 import Event from '../Event/Event'
 import EndScene from '../EndScene/EndScene'
+import apiUrl from '../../apiConfig'
 import './game-container.css'
 
 const GameContainer = () => {
@@ -17,9 +18,9 @@ const GameContainer = () => {
     useEffect(() => {
         const makeAPICall = async () => {
             try {
-                let res = await axios(`http://localhost:3000/characters`)
+                let res = await axios(`${apiUrl}/characters`)
                 setCharacters(res.data)
-                res = await axios(`http://localhost:3000/events`)
+                res = await axios(`${apiUrl}/events`)
                 setEvents([...res.data])
                 setDailyEvents([...res.data])
             } catch (err) {
