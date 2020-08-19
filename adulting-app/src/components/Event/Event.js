@@ -13,7 +13,6 @@ const Event = (props) => {
     return (
         <div className='event-container'>
             <h2 className='event-day'>{dayTitle}</h2>
-            {/* <EventArt artwork={dailyEventResult ? dailyEventResult.artwork : dailyEvent.artwork} /> */}
             <EventArt dailyEvent={dailyEvent} dailyEventResult={dailyEventResult} />
             <EventText
                 dailyEvent={dailyEvent}
