@@ -10,7 +10,6 @@ const EventArt = (props) => {
         <img className='event-art' src={dailyEvent.artwork} alt='event' />
 
     return (
-        // <img src={props.artwork} alt='event' />
         <div>{display}</div>
     )
 
