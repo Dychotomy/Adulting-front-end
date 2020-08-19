@@ -1,6 +1,25 @@
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: 100vh;
+}
+
+.about-title {
+    margin: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about-text {
+    margin: 25px;
+}
+.about-credit {
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-list {
+    list-style: none;
+    columns: 2
 }
