@@ -10,12 +10,8 @@ const Navigation = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link to='/home'>
-                        <Nav.Link className='header-link' href="#home" style={{ color: '#64bcc5' }}>Home</Nav.Link>
-                    </Link>
-                    <Link to='/about'>
-                        <Nav.Link className='header-link' href="#link" style={{ color: '#64bcc5' }}>About</Nav.Link>
-                    </Link>
+                    <Nav.Link className='header-link' href="/home" style={{ color: '#64bcc5' }}>Home</Nav.Link>
+                    <Nav.Link className='header-link' href="/about" style={{ color: '#64bcc5' }}>About</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar >

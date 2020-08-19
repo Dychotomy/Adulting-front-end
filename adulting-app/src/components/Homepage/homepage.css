@@ -6,10 +6,16 @@
 }
 
 .home-title {
+    margin: 25px;
     text-align: center;
     justify-self: center;
     align-self: center;
     font-weight: bold;
+}
+
+.home-text {
+    margin: 25px;
+    padding: 15px;
 }
 
 .home-img-1 {
